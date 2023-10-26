@@ -1,0 +1,77 @@
+/*Course Homepage Stylesheet*/
+
+h1 {
+  font-size: 2em;
+  animation: rainbow 2.5s linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rainbow {
+  100%,
+  0% {
+    color: rgb(255, 0, 0);
+  }
+  8% {
+    color: rgb(255, 127, 0);
+  }
+  16% {
+    color: rgb(255, 255, 0);
+  }
+  25% {
+    color: rgb(127, 255, 0);
+  }
+  33% {
+    color: rgb(0, 255, 0);
+  }
+  41% {
+    color: rgb(0, 255, 127);
+  }
+  50% {
+    color: rgb(0, 255, 255);
+  }
+  58% {
+    color: rgb(0, 127, 255);
+  }
+  66% {
+    color: rgb(0, 0, 255);
+  }
+  75% {
+    color: rgb(127, 0, 255);
+  }
+  83% {
+    color: rgb(255, 0, 255);
+  }
+  91% {
+    color: rgb(255, 0, 127);
+  }
+}
+
+/*type selector*/
+body {
+  background-color: coral;
+}
+
+/*id selector*/
+#main-heading {
+  color: aqua;
+}
+
+/*class selector*/
+.primary {
+  border: 1px solid #fff;
+  padding: 10px;
+}
+
+/*psuedo selector*/
+
+a:visited {
+  color: black;
+}
+
+a:link {
+  color: white;
+}
+
+a:hover {
+  color: green;
+}
