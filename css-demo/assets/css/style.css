@@ -1,0 +1,35 @@
+/* Color Theme Swatches in Hex 
+#BBFA6E
+#80FA6E
+#FAEA6E
+#6EFA8F
+*/
+/* ---------------Box Sizing----------------- */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* ---------------Global------------------- */
+
+body {
+  font-family: "Playfair Display", serif;
+  font-family: "Quicksand", sans-serif;
+  background-color: #faea6e;
+  color: black;
+}
+
+main {
+  background-color: #6efa8f;
+  width: 50vw;
+  margin: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
