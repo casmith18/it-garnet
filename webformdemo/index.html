@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Carson Smith" />
+    <meta
+      name="description"
+      content="This is a html form demo made by Carson Smith for IT-Garnet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Web Form Demo</title>
+  </head>
+  <body>
+    <h1>New Patient Registration</h1>
+    <h4>Please fill out the form below</h4>
+
+    <form action="https://brucebauer.info/assets/ITEC3650/datadump.php">
+      <label class="formlabel" for="firstname">First Name: </label>
+      <input
+        type="text"
+        id="firstname"
+        name="firstname"
+        size="30"
+        maxlength="30"
+      /><br />
+      <label class="formlabel" for="middleinitial">Middle Initial: </label>
+      <input
+        type="text"
+        id="middleinitial"
+        name="middleinitial"
+        size="1"
+        maxlength="1"
+      /><br />
+      <label class="formlabel" for="lastname">Last Name: </label>
+      <input
+        type="text"
+        id="lastname"
+        name="lastname"
+        size="30"
+        maxlength="30"
+      /><br />
+      <label class="formlabel" for="email">Email: </label>
+      <input
+        type="text"
+        id="email"
+        name="email"
+        size="30"
+        maxlength="30"
+      /><br />
+
+      <label class="formlabel" for="sex">Sex: </label>
+      <label for="m"
+        ><input type="radio" name="sex" id="m" value="m" />Male</label
+      >
+      <label for="f"
+        ><input type="radio" name="sex" id="f" value="f" />Female</label
+      >
+      <label for="n"
+        ><input type="radio" name="sex" id="n" value="n" />N/A</label
+      ><br />
+      <label class="formlabel" for="birthday">Birthday: </label>
+      <input
+        type="text"
+        id="birthday"
+        name="birthday"
+        size="8"
+        maxlength="8"
+      /><br />
+      <label class="formlabel" for="height">Height (inches): </label>
+      <input
+        type="text"
+        id="height"
+        name="height"
+        size="3"
+        maxlength="3"
+      /><br />
+      <label class="formlabel" for="weight">Weight (pounds): </label>
+      <input
+        type="text"
+        id="weight"
+        name="weight"
+        size="3"
+        maxlength="3"
+      /><br />
+      <hr />
+      <input
+        type="submit"
+        value="Submit Patient Form"
+        name="submitpatientform"
+      />
+    </form>
+  </body>
+</html>
