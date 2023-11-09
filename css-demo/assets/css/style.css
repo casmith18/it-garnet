@@ -15,6 +15,13 @@ html {
   box-sizing: inherit;
 }
 
+/* ---------------Utility Classes------------------- */
+
+.container {
+  margin: 0;
+  padding: 40px;
+}
+
 /* ---------------Global------------------- */
 
 body {
@@ -28,8 +35,77 @@ main {
   background-color: #6efa8f;
   width: 50vw;
   margin: auto;
-  padding-left: 10px;
-  padding-right: 10px;
-  border: 2px solid black;
-  border-radius: 10px;
+  border-radius: 8px;
+
+  /* border: 2px solid black;
+  border-radius: 10px;*/
+}
+
+header.primary {
+  background-color: #faea6e;
+  background-image: url(https://assets.codepen.io/7248/bg_1.png);
+  background-size: cover;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border: 3px solid black;
+  border-radius: 8px;
+}
+
+header.primary .hgroup {
+  width: 70%;
+}
+
+.hgroup h1,
+.hgroup h2 {
+  margin: 0;
+}
+
+header.primary .hgroup h1 a {
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px black;
+  font-size: 2.4rem;
+}
+
+header.primary .hgroup h2 {
+  color: white;
+  text-shadow: 1px 1px black;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+header.primary nav {
+  width: 30%;
+  margin: 0;
+}
+
+header.primary nav ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+header.primary nav ul li {
+  margin-bottom: 10px;
+}
+
+header.primary nav ul li a {
+  color: white;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: block;
+  text-align: right;
+  padding: 5px;
+  border-radius: 10px 0;
+  border: 1px solid #faea6e;
+  border-right: 10px solid #faea6e;
+}
+
+#content h2,
+#content h3 {
+  color: blue;
+  border-left: 7.5px solid white;
+  border-radius: 15px 0;
+  padding: 20px;
 }
