@@ -110,10 +110,10 @@
         size="30"
         maxlength="30"
       /><br />
-      <label class="formlabel" for="City">City/State/Zip: </label>
+      <label class="formlabel" for="citystatezip">City/State/Zip: </label>
       <input type="text" id="city" name="city" size="30" maxlength="30" />
       <label> ,</label>
-      <select>
+      <select id="state" name="state">
         <option value="Select A State">Select A State...</option>
         <option value="AL">Alabama</option>
         <option value="AK">Alaska</option>
@@ -183,7 +183,7 @@
       </label>
       <textarea rows="3" cols="30"></textarea>
       <br />
-      <hr>
+      <hr />
       <input
         type="submit"
         value="Submit Patient Form"
