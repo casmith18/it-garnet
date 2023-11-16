@@ -30,13 +30,7 @@
         size="30"
         maxlength="30"
         data-rule-required="true"
-        data-msg-required="Age is Required"
-        data-rule-number="true"
-        data-msg-number="Age must be a number in years"
-        data-rule-min="18"
-        data-msg-min="Age must be greater than or equal to 18 years"
-        data-rule-max="65"
-        data-msg-max="Age must be less than or equal to 65 years"
+        data-msg-required="Required"
       />
       <label for="firstname" class="error">Error</label>
       <br />
@@ -55,6 +49,8 @@
         name="lastname"
         size="30"
         maxlength="30"
+        data-rule-required="true"
+        data-msg-required="Required"
       /><br />
       <label class="formlabel" for="email">Email: </label>
       <input
@@ -63,17 +59,19 @@
         name="email"
         size="30"
         maxlength="30"
+        data-rule-required="true"
+        data-msg-required="Email Required"
       /><br />
 
       <label class="formlabel" for="sex">Sex: </label>
       <label for="m"
-        ><input type="radio" name="sex" id="sex" value="m" />Male</label
+        ><input type="radio" name="sex" class="sex" value="m" />Male</label
       >
       <label for="f"
-        ><input type="radio" name="sex" id="sex" value="f" />Female</label
+        ><input type="radio" name="sex" class="sex" value="f" />Female</label
       >
       <label for="n"
-        ><input type="radio" name="sex" id="sex" value="n" />N/A</label
+        ><input type="radio" name="sex" class="sex" value="n" />N/A</label
       ><br />
       <label class="formlabel" for="birthday">Birthday: </label>
       <input
@@ -82,6 +80,8 @@
         name="birthday"
         size="8"
         maxlength="8"
+        data-rule-required="true"
+        data-msg-required="Date Required"
       /><br />
       <label class="formlabel" for="height">Height (inches): </label>
       <input
@@ -90,6 +90,10 @@
         name="height"
         size="3"
         maxlength="3"
+        data-rule-required="true"
+        data-msg-required="Number Required"
+        data-rule-min="12" data-msg-min="Must be greater than 12"
+        data-rule-max="120" data-msg-max="Must be less than 120"
       /><br />
       <label class="formlabel" for="weight">Weight (pounds): </label>
       <input
@@ -98,7 +102,11 @@
         name="weight"
         size="3"
         maxlength="3"
-      /><br />
+        data-rule-required="true"
+        data-msg-required="Number Required"
+        data-rule-min="10" data-msg-min="Must be greater than 10"
+        data-rule-max="500" data-msg-max="Must be less than 500">
+      <br />
       <hr />
       <label class="formlabel" for="phonenumber">Phone Number: </label>
       <input
