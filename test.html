@@ -1,129 +1,155 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Calculator">
-  
+    <meta name="description" content="Unit Converter using AJAX">
     <meta name="author" content="Carson Smith">
-    <title>Calculator</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
+    <title>Unit Converter (AJAX)</title>
 </head>
 <body>
+<style>
+
+.formcontainer {
+    width: 1000px;
+    padding: 5px;
+}
+
+.formlabel {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    padding: 5px;
+}
+.error {
+    color: red;
+    padding-left: 5px;
+}
+
+h1 {
+    border-bottom: 3px solid #cc9900;
+    color: #996600;
+    font-size: 30px;
+}
+
+</style>
 <form id="myform">
-    <div class="formcontainer" onsubmit="return false">
-        <h1>JavaScript Calculator</h1>
+    <div class="formcontainer">
+        <h1>Unit Converter (AJAX)</h1>
         <fieldset id="detail">
-            <legend>Calculator</legend>  
+            <legend>Unit Converter (AJAX)</legend>  
             <br>
             
-            <label class="formlabel" for="Operand1">Operand 1: </label>
-            <input type="text" id="Operand1" name="Operand1" size="15" maxlength="15"       
-                   data-rule-required="true"  data-msg-required="Operand 1 is Required" 
-                   data-rule-number="true" data-msg-number="Operand 1 must be a Number">
-            <label class="error" for="Operand1" id="Operand1Error"></label>
-            <br><br>
-      
-            <label class="formlabel">Operator: </label>
-            <label for="AddOperator">
-                <input type="radio" name="Operator" id="AddOperator" value="Add"
-                       data-rule-required="true" data-msg-required="Operator is Required" />+
-            </label>
-            <label for="SubOperator">
-                <input type="radio" name="Operator" id="SubOperator" value="Sub">-
-            </label>
-            <label for="MulOperator">
-                <input type="radio" name="Operator" id="MulOperator" value="Mul">*
-            </label>
-            <label for="DivOperator">
-                <input type="radio" name="Operator" id="DivOperator" value="Div">/
-            </label>
-            <label for="Operator" class="error" id="OperatorError"></label>
+            <label class="formlabel" for="FromValue">From Value: </label>
+            <input type="text" id="FromValue" name="FromValue" size="15" maxlength="15"
+                    data-rule-required="true"  data-msg-required="From Value is Required" 
+                    data-rule-number="true" data-msg-number="From Value must be a Number">
+            <label for="FromValue" class="error" id="FromValueMsg"></label>
             <br><br>
 
-            <label class="formlabel" for="Operand2">Operand 2: </label>
-            <input type="text" id="Operand2" name="Operand2" size="15" maxlength="15"       
-                   data-rule-required="true"  data-msg-required="Operand 2 is Required" 
-                   data-rule-number="true" data-msg-number="Operand 2 must be a Number">
-            <label class="error" for="Operand2" id="Operand2Error"></label>
+            <label class="formlabel">From Unit: </label>
+                <label for="CmOperator1">
+                    <input type="radio" name="Operator1" id="CmOperator1" value="Cm"
+                           data-rule-required="true" data-msg-required="From Unit is Required" />Centimeters
+                </label>
+                <label for="MtOperator1">
+                    <input type="radio" name="Operator1" id="MtOperator1" value="Mt">Meters
+                </label>
+                <label for="KlOperator1">
+                    <input type="radio" name="Operator1" id="KlOperator1" value="Kl">Kilometers
+                </label>
+                <label for="InOperator1">
+                    <input type="radio" name="Operator1" id="InOperator1" value="In">Inches
+                </label>
+                <label for="FtOperator1">
+                    <input type="radio" name="Operator1" id="FtOperator1" value="Ft">Feet
+                </label>
+                <label for="YdOperator1">
+                    <input type="radio" name="Operator1" id="YdOperator1" value="Yd">Yards
+                </label>
+                <label for="MlOperator1">
+                    <input type="radio" name="Operator1" id="MlOperator1" value="Ml">Miles
+                </label>
+            <label for="Operator1" class="error" id="Operator1Msg"></label>
             <br><br>
 
-            <label class="formlabel">Result: </label>
+            <label class="formlabel">To Unit: </label>
+                <label for="CmOperator2">
+                    <input type="radio" name="Operator2" id="CmOperator2" value="Cm"
+                           data-rule-required="true" data-msg-required="To Unit is Required" />Centimeters
+                </label>
+                <label for="MtOperator2">
+                    <input type="radio" name="Operator2" id="MtOperator2" value="Mt">Meters
+                </label>
+                <label for="KlOperator2">
+                    <input type="radio" name="Operator2" id="KlOperator2" value="Kl">Kilometers
+                </label>
+                <label for="InOperator2">
+                    <input type="radio" name="Operator2" id="InOperator2" value="In">Inches
+                </label>
+                <label for="FtOperator2">
+                    <input type="radio" name="Operator2" id="FtOperator2" value="Ft">Feet
+                </label>
+                <label for="YdOperator2">
+                    <input type="radio" name="Operator2" id="YdOperator2" value="Yd">Yards
+                </label>
+                <label for="MlOperator2">
+                    <input type="radio" name="Operator2" id="MlOperator2" value="Ml">Miles
+                </label>
+            <label for="Operator2" class="error" id="Operator2Msg"></label>
+            <br><br>
+
+            <label class="formlabel">To Value: </label>
             <span id="Result"></span>
             <br><br>
 
             <input type="button" value="Calculate" name="Calculate" onclick="calculate();">
-            <input type="button" value="Clear" name="Clear" onclick="clearform();" novalidate>
+            <input type="button" value="Clear" name="Clear" onclick="clearform();">
 
         </fieldset>
     </div>
 </form>
-<script> function calculate() {
-    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+<script>
 
-    if ($( "#myform" ).valid()) {
-        
-        var operand1 = document.getElementById("Operand1").value;
-        var operand2 = document.getElementById("Operand2").value;
-        
-        var operand1fp = parseFloat (operand1);
-        var operand2fp = parseFloat (operand2);
-        
-        var operator;
-        if (document.getElementById("AddOperator").checked) {
-            operator = document.getElementById("AddOperator").value;
-        }
-        if (document.getElementById("SubOperator").checked) {
-            operator = document.getElementById("SubOperator").value;
-        }
-        if (document.getElementById("MulOperator").checked) {
-            operator = document.getElementById("MulOperator").value;
-        }
-        if (document.getElementById("DivOperator").checked) {
-            operator = document.getElementById("DivOperator").value;
-        }
+function calculate() {
+    // Get user input values
+    var fromValue = document.getElementById("FromValue").value;
+    var fromUnit = document.querySelector('input[name="Operator1"]:checked').value;
+    var toUnit = document.querySelector('input[name="Operator2"]:checked').value;
 
-        var result;
-        
-        if (operator == "Add") {
-           result = operand1fp + operand2fp;
-        }
- 
-        if (operator == "Sub") {
-          result = operand1fp - operand2fp;
-        }
+    // Perform AJAX request
+    var url = 'https://brucebauer.info/assets/ITEC3650/unitsconversion.php';
+    var data = {
+        fromValue: fromValue,
+        fromUnit: fromUnit,
+        toUnit: toUnit
+    };
 
-        if (operator == "Mul") {
-            result = operand1fp * operand2fp;
+    fetch(url, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
         }
-        
-        if (operator == "Div") {
-            result = operand1fp / operand2fp;
-        }
-
-      
-        document.getElementById("Result").innerHTML = result.toString();
-    }
+    })
+    .then(response => response.json())
+    .then(result => {
+        // Update result span with converted value
+        document.getElementById("Result").innerText = result.convertedValue;
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
 }
 
 function clearform() {
-    
-    document.getElementById("Operand1").value = "";
-    document.getElementById("Operand2").value = "";
-    document.getElementById("Operand1Error").innerHTML = "";
-    document.getElementById("Operand2Error").innerHTML = "";
-    document.getElementById("AddOperator").checked = false;
-    document.getElementById("SubOperator").checked = false;
-    document.getElementById("MulOperator").checked = false;
-    document.getElementById("DivOperator").checked = false;
-    document.getElementById("OperatorError").innerHTML = "";
-    document.getElementById("Result").innerHTML = "";
+    // Clear input values and result
+    document.getElementById("FromValue").value = "";
+    document.getElementById("Result").innerText = "";
 }
 
-$( "#myform" ).validate({
- 
-});</script>
+</script>
 </body>
 </html>
