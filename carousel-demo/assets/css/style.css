@@ -35,13 +35,6 @@ img{
 }
 }
 
-.card{
-    height:300px;
-    display: grid;
-    grid-template-columns: 180px 1fr;
-    padding:2rem;
-}
-
 div{
     margin:20px;
 }

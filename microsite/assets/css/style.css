@@ -1,0 +1,253 @@
+/*fonts
+
+.damion-regular {
+    font-family: "Damion", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+*/
+
+/*Navbar*/
+.navbar{
+    background-color: black;
+}
+
+.navbar-brand h1{
+    font-family: "Damion", cursive;
+    color:red;
+    display: inline;
+   
+ 
+    
+}
+.navbar-brand img{
+    padding-bottom:20px;
+}
+/*Navbar end*/
+
+body{
+    background-color: #26221f;
+    margin:auto;
+}
+
+.carousel-item img{
+    object-fit: cover;
+    object-position: center;
+    height: 70vh;
+    overflow: hidden;
+    }
+
+body h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color:white;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 50px;
+    padding-top: 30px;
+    padding-bottom: 150px;
+}
+
+#content h1{
+  font-size: 150px;
+  margin-bottom:10px;
+}
+
+body h2,p{
+    color:white;
+}
+
+.intro p{
+  text-align: left;
+  padding:50px;
+  font-size: 25px;
+  
+}
+
+.navbuttons button{
+  margin:auto;
+  font-family: "Poppins", sans-serif;
+  height: 75px; 
+  width: 200px;
+  background-color: red;
+  color:white;
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top:70px;
+  border-bottom-left-radius: 40px;
+  border-top-right-radius:20px;
+  margin:20px;
+}
+
+.navbuttons button:hover{
+  color: rgba(255, 255, 255, 0.8)
+}
+
+#startup img{
+  width:100%;
+  padding-top:100px;
+}
+
+#startup button{
+  display: block;
+  margin:auto;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  height: 150px; 
+  width: 150px;
+  background-color: red;
+  color:white;
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top:30px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+#startup button:hover{
+color: rgba(255, 255, 255, 0.8)
+}
+
+.bottomp p{
+  text-align: left;
+  padding:50px;
+  font-size: 25px;
+  
+}
+
+.bottomp p a{
+  color:red;
+}
+
+.bottomp h2{
+  text-align: center;
+  margin-top:70px;
+}
+
+footer{
+  width: 100%;
+  background-color: red;
+  color:white;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  padding:30px;
+  left: 0;
+  bottom: 0;
+}
+
+footer a{
+  color:white;
+  text-decoration: underline;
+}
