@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="See the value of Currency throughout history">
+    <meta name="author" content="Carson Smith">
+    <title>Currency Value History</title>
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="assets/js/script.js"></script>
+</head>
+<body>
+    <form id="myform">
+        <div class="formcontainer">
+            <h2>Currency Value History</h2>
+           
+            <label for="BaseCurrency" class="formlabel baselbl" >Base Currency:</label>
+            <select name="BaseCurrency" id="BaseCurrency"                
+            data-rule-required="true" data-msg-required="Base Currency is Required">
+            <option value="">Select a Currency...</option>
+            <option value="USD">US Dollar</option>
+            <option value="EUR">Euro</option>
+            <option value="JPY">Japan Yen</option>
+            <option value="BHD">Bahrain Dinar</option>
+            <option value="CAD">Canada Dollar</option>
+            </select>
+            <label class="error" for="BaseCurrency" id="BaseCurrencyError"></label>
+            
+            <br>
+ 
+            <label for="ConvertCurrency" class="formlabel convertlbl" >Convert to Currency:</label>
+            <select name="ConvertCurrency" id="ConvertCurrency"                
+            data-rule-required="true" data-msg-required="Convert to Currency is Required">
+            <option value="">Select a Currency...</option>
+            <option value="USD">US Dollar</option>
+            <option value="EUR">Euro</option>
+            <option value="JPY">Japan Yen</option>
+            <option value="BHD">Bahrain Dinar</option>
+            <option value="CAD">Canada Dollar</option>
+            </select>
+            <label class="error" for="ConvertCurrency" id="ConvertCurrencyError"></label>
+            
+            <br>
+
+            <label class="formlabel">From Date:</label>
+            <input type="date" name="FromDate" id="FromDate" 
+            data-rule-required="true" data-msg-required="From Date is Required">
+            <label id="FromDateError" for="FromDate" class="error"></label>
+            
+            <br>   
+
+            <label class="formlabel">To Date:</label>
+            <input type="date" name="ToDate" id="ToDate" 
+			data-rule-required="true" data-msg-required="To Date is Required">
+		    <label id="ToDateError" for="ToDate" class="error"></label>
+            
+            <br><br>
+            
+            <input type="button" value="DisplayStock" id="DisplayStock" name="DisplayStock" onclick="GetStock();">
+            <input type="button" value="Clear" id="Clear" name="Clear" onclick="ClearForm();">
+            
+            <hr>
+            <br>
+           
+            <div class="clearfix">
+                <div class="img-container">
+                    <canvas id="chartjs-0" width="400" height="400"></canvas>
+                </div>
+
+            </div>
+        </div>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    
+</body>
+</html>
