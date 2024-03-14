@@ -1,6 +1,3 @@
-
-
-
 async function GetStock() {
     "use strict";
 
@@ -40,7 +37,6 @@ async function GetStock() {
                     for (var i = 0; i < numdays; i++) {
                         /* stock close value */
                         stockvalue[i] = msg2.results[i].c;
-                        /* stock volume */
                         var tempdate = new Date(msg2.results[i].t);
                         /* extract the date string from the value */
                         stockdate[i] = tempdate.toLocaleDateString();
@@ -56,7 +52,7 @@ async function GetStock() {
                     "type":"line",
                     "data": {
                         "labels": stockdate,
-                        "datasets":[{"label":"Base Currency to Convert Currency",
+                        "datasets":[{"label":['BaseCurrency ', "to", ' ConvertCurrency'],
                         "data": stockvalue,
                         "fill":false,
                         "borderColor":"rgb(75, 192, 192)",
@@ -68,7 +64,14 @@ async function GetStock() {
                     }
                 );
                 
-            
+
+
+
+
+
+
+
+
         }
         else {
             /* AJAX completed with error - probably invalid stock ticker symbol */
