@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Carson Andrew Smith">
+    <title>Mars Rover Photo Explorer</title>
+    <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+    <h1>Mars Rover Photo Explorer</h1>
+    <table>
+        <tr>
+          <th>Rover</th>
+          <th>Mission Start</th>
+          <th>Mission End</th>
+        </tr>
+        <tr>
+          <td>Curiosity</td>
+          <td>08/06/2012</td>
+          <td>09/28/2019</td>
+        </tr>
+        <tr>
+          <td>Opportunity</td>
+          <td>01/26/2004</td>
+          <td>06/11/2018</td>
+        </tr>
+        <tr>
+          <td>Spirit</td>
+          <td>01/05/2004</td>
+          <td>03/21/2004</td>
+        </tr>
+      </table>
+    <h2>Select a Rover and a Picture Date</h2>
+    <form id="roverForm">
+        <div>
+            <label for="roverCuriosity">
+                <input type="radio" name="rover" id="roverCuriosity" value="curiosity" required> Curiosity
+            </label>
+            <label for="roverOpportunity">
+                <input type="radio" name="rover" id="roverOpportunity" value="opportunity"> Opportunity
+            </label>
+            <label for="roverSpirit">
+                <input type="radio" name="rover" id="roverSpirit" value="spirit"> Spirit
+            </label>
+            <span id="roverErrorMsg"></span>
+        </div>
+        <div>
+            <label for="pictureDate">Picture Date:</label>
+            <input type="date" name="pictureDate" id="pictureDate" required>
+            <span id="dateErrorMsg"></span>
+        </div>
+        <div>
+            <input type="submit" value="Search" id="searchBtn">
+            <input type="reset" value="Clear" id="clearBtn">
+        </div>
+    </form>
+    <div id="errorMessages"></div>
+    <div id="photoCount"></div>
+
+    <div id="photoGallery"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+</html>
