@@ -72,3 +72,18 @@
   footer{
     position: fixed;
   }
+
+  .genpic{
+    display: block;
+    margin: auto;
+    padding-bottom:10px;
+  }
+
+  h3, p{
+    text-align: center;
+  }
+
+  .genpic {
+    width: 150px;
+    height: 100px;
+  }
