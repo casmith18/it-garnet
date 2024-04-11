@@ -1,0 +1,297 @@
+/*Fonts
+
+.fira-sans-thin {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.fira-sans-extralight {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.fira-sans-light {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.fira-sans-regular {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fira-sans-medium {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.fira-sans-semibold {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.fira-sans-bold {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.fira-sans-extrabold {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.fira-sans-black {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.fira-sans-thin-italic {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.fira-sans-extralight-italic {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.fira-sans-light-italic {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.fira-sans-regular-italic {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.fira-sans-medium-italic {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.fira-sans-semibold-italic {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.fira-sans-bold-italic {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.fira-sans-extrabold-italic {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.fira-sans-black-italic {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+*/
+
+body {
+  background-color: #d4d4ad;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.nav-link {
+  color: white;
+  font-size: 25px;
+  margin-right: 20px;
+}
+
+.navbar-nav {
+  margin-bottom: 80px;
+}
+
+#topcontent {
+  background-image: url(../resources/img/homepage_header_img.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 70vh;
+}
+
+#banner {
+  background-color: #566c2b;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 70vw;
+  margin: auto;
+  margin-top: -30px;
+  border-radius: 10px;
+}
+
+#overview {
+  text-align: left;
+  width: fit-content;
+  height: fit-content;
+  background-color: #e8dc4f;
+  width: 90vw;
+  margin: auto;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 10px;
+}
+
+#overview h2 {
+  text-align: center;
+}
+
+.containterbuttons {
+  width: 90vw;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.buttonhp {
+  color: white;
+  background-color: #e8dc4f;
+  text-align: center;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 20px;
+  width: 300px;
+  height: 150px;
+  display: grid;
+  align-items: center;
+  transition: 1s ease;
+}
+
+#bh1:hover {
+  background-image: url(../resources/img/rentalsbtn.jpg);
+  background-repeat: no-repeat;
+  background-size: 300px 150px;
+  -webkit-text-stroke-width: 0.7px;
+  -webkit-text-stroke-color: black;
+}
+
+#bh2:hover {
+  background-image: url(../resources/img/levelbtn.jpg);
+  background-repeat: no-repeat;
+  background-size: 300px 150px;
+  -webkit-text-stroke-width: 0.7px;
+  -webkit-text-stroke-color: black;
+}
+
+#bh3:hover {
+  background-image: url(../resources/img/cabinbtn.jpg);
+  background-repeat: no-repeat;
+  background-size: 300px 150px;
+  -webkit-text-stroke-width: 0.7px;
+  -webkit-text-stroke-color: black;
+}
+
+#bh4:hover {
+  background-image: url(../resources/img/hatmockup.jpg);
+  background-repeat: no-repeat;
+  background-size: 300px 150px;
+  -webkit-text-stroke-width: 0.7px;
+  -webkit-text-stroke-color: black;
+}
+
+#bh5:hover {
+  background-image: url(../resources/img/historybtn.jpg);
+  background-repeat: no-repeat;
+  background-size: 300px 150px;
+  -webkit-text-stroke-width: 0.7px;
+  -webkit-text-stroke-color: black;
+}
+
+#bh6:hover {
+  background-image: url(../resources/img/aboutbtn.jpg);
+  background-repeat: no-repeat;
+  background-size: 300px 150px;
+  -webkit-text-stroke-width: 0.7px;
+  -webkit-text-stroke-color: black;
+}
+
+#banner2 {
+  background-color: #566c2b;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 90vw;
+  margin: auto;
+  margin-top: 70px;
+  border-radius: 10px;
+}
+
+#onefivethree {
+  transform: rotate(-17deg);
+  position: absolute;
+  margin-top: -20px;
+  margin-left: -50px;
+  background-color: brown;
+  padding: 5px;
+  background-image: url(../resources/other/woodtexture.jpg);
+  background-size: cover;
+  border-radius: 5px;
+}
+
+#carousel {
+  text-align: left;
+  width: fit-content;
+  height: fit-content;
+  background-color: grey;
+  width: 90vw;
+  margin: auto;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 10px;
+}
+
+.carousel-item {
+  max-height: 500px;
+}
+
+footer {
+  background-color: #566c2b;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+#brandimg {
+  width: 350px;
+  height: 200px;
+  float: right;
+  margin-right: 25px;
+}
+
+#footernav {
+  float: right;
+  text-align: right;
+}
+
+footer a {
+  display: block;
+}
+
+#footercopy {
+  align-items: center;
+  text-align: center;
+  display: inline;
+}
